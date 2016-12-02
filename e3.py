@@ -1,3 +1,4 @@
+### Code does not run
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
@@ -14,6 +15,7 @@ for year in range(1924, 2013, 4):
     votes.dropna(inplace=True, axis=1)
 
     votes["Year"]=year
+    ### What is df? It isn't defined
     elections.append(df[["Democratic", "Republican", "Total Votes Cast", "Year"]])
 
     results=pd.concat(elections)
